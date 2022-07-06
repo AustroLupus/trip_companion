@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <title>TITULO</title>
+    <style>
+      legend {
+        font-size: inherit;
+        line-height: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #555;
+      }
+    </style>
+    {% block styles %}
+    {% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      {% for error in errors %}
+        <div class="row">
+          <div class="col-4 offset-4">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>Error!</strong> {{ error }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      {% for notice in notices %}
+      <div class="row">
+        <div class="col-4 offset-4">
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>&iexcl;&Eacute;xito!</strong> {{ notice }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>    
+        </div>
+      </div>
+      {% endfor %}
+      
+      {% block main %}
+        <h2>Esto no debería verse</h2>
+      {% endblock %}
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

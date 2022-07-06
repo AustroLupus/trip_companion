@@ -1,0 +1,22 @@
+{
+  "name": "nombre",
+  "version": "1.0.0",
+  "description": "Aca va la descripcion",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Carlos Horta",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bootstrap": "^5.1.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "nodemon": "^2.0.15",
+    "nunjucks": "^3.2.3",
+    "pg": "^8.7.3"
+  }
+}

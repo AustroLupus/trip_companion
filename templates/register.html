@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+
+  <div class="row mt-5">
+    <div class="col-4 offset-4 m-azul rounded p-4">
+      <h3>Registrese en para jugar a Las Trivias</h3>
+      <form method="post" action="/register">
+        <div class="mb-3 form-floating">
+          <input name="name" required type="text" class="form-control" placeholder="Nombre Apellido">
+          <label for="floatingInput">Nombre</label>
+        </div>
+        <div class="mb-3 form-floating">
+          <input name="email" required type="email" class="form-control" placeholder="nombre@correo.com">
+          <label for="floatingInput">Email</label>
+        </div>
+        <div class="mb-3 form-floating">
+          <input name="password" required type="password" class="form-control" placeholder="contrasena">
+          <label for="floatingInput">Contrase&ntilde;a</label>
+        </div>
+        <div class="mb-3 form-floating">
+          <input name="password_confirm" required type="password" class="form-control" placeholder="contrasena">
+          <label for="floatingInput">Repita contrase&ntilde;a</label>
+        </div>
+      
+        <button type="submit" class="btn btn-light">Registrarse</button>
+      </form>
+      <a href="/login">Ingresar al Sitio</a>
+    </div>
+  </div>
+{% endblock %}

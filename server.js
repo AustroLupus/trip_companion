@@ -2,7 +2,7 @@ const express = require('express')
 const nunjucks = require('nunjucks')
 const session = require('express-session')
 const flash = require('connect-flash')
-const fileUpload = require('express-fileupload')
+//const fileUpload = require('express-fileupload')
 
 
 const app = express()
